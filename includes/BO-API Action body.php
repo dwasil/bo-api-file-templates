@@ -9,6 +9,8 @@ use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\Http\Response;
 use Laminas\Psr7Bridge\Psr7Response;
 use Throwable;
+use ${MODULE}\Application\Service\\${NAME}Service;
+use ${MODULE}\Domain\Dto\\${NAME}Dto;
 
 /*
     Add to module.config.php

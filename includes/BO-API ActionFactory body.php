@@ -1,5 +1,7 @@
 use Laminas\Hydrator\ReflectionHydrator;
 use Psr\Container\ContainerInterface;
+use ${MODULE}\Application\Service\\${NAME}Service;
+use ${MODULE}\Application\Service\\${NAME}Action;
 
 final class ${NAME}ActionFactory;
 {
