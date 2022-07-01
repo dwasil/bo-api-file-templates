@@ -8,8 +8,8 @@ final class ${NAME}Service
     ) {
     }
 
-    public function find(int ${DC}id): ${NAME}Entity
+    public function find(int ${DS}id): ${NAME}Entity
     {
-        return $this->repository->find(${DC}id);
+        return $this->repository->find(${DS}id);
     }
 }
