@@ -1,5 +1,5 @@
-use ${MODULE}\Application\Service\\${NAME}Repository;
-use ${MODULE}\Application\Service\\${NAME}Dto;
+use ${MODULE}\Infrastructure\Repository\\${NAME}Repository;
+use ${MODULE}\Domain\Model\\${NAME};
 
 final class ${NAME}Service
 {
@@ -8,7 +8,7 @@ final class ${NAME}Service
     ) {
     }
 
-    public function find(int ${DC}id): ${NAME}Dto
+    public function find(int ${DC}id): ${NAME}Entity
     {
         return $this->repository->find(${DC}id);
     }

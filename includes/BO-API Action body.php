@@ -10,7 +10,7 @@ use Laminas\Http\Response;
 use Laminas\Psr7Bridge\Psr7Response;
 use Throwable;
 use ${MODULE}\Application\Service\\${NAME}Service;
-use ${MODULE}\Domain\Dto\\${NAME}Dto;
+use ${MODULE}\Domain\Model\\${NAME};
 
 /*
     Add to module.config.php
@@ -67,7 +67,7 @@ final class ${NAME}Action extends AbstractActionController implements ActionInte
         }
 
         try {
-            ${DS}result = ${DS}this->service->fetch(${DS}id);
+            ${DS}result = ${DS}this->service->find(${DS}id);
         } catch (Throwable ${DS}exception) {
             return new ApiProblemResponse(
                 new ApiProblem(500, ${DS}exception->getMessage())
@@ -77,8 +77,8 @@ final class ${NAME}Action extends AbstractActionController implements ActionInte
         return Psr7Response::toLaminas(
             new JsonResponse(
                 array_map(
-                    function (${NAME}Dto ${DS}dto): array {
-                        return ${DS}this->hydrator->extract(${DS}dto);
+                    function (${NAME} ${DS}${NAME}.toLowerCase()): array {
+                        return ${DS}this->hydrator->extract(${DS}${NAME}.toLowerCase());
                     },
                     ${DS}result
                 )
